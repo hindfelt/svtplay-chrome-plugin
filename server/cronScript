@@ -1,0 +1,10 @@
+#!/bin/bash
+
+NAME=$RANDOM
+mv /FILEDIR/doc.Que /FILEDIR/$NAME
+touch /FILEDIR/doc.Que
+chmod 777 /FILEDIR/doc.Que
+chmod 777 /FILEDIR/$NAME
+/bin/bash /FILEDIR/$NAME
+rm /FILEDIR/$NAME
+echo $(date -u) " - " $NAME " : done" >>/FILEDIR/log.txt
