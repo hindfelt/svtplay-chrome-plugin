@@ -1,3 +1,6 @@
-chrome.browserAction.onClicked.addListener(function() { 
-  alert('Hello, World!'); 
-})
+chrome.browserAction.onClicked.addListener(function(tab) {
+
+   chrome.tabs.executeScript(null, {code:'document.body.style.backgroundColor="red";'} );
+
+
+});
